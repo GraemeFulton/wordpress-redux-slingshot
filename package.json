@@ -31,6 +31,7 @@
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
+    "kasia": "4.0.23",
     "object-assign": "4.1.0",
     "react": "15.4.1",
     "react-dom": "15.4.1",
@@ -38,7 +39,8 @@
     "react-router": "3.0.0",
     "react-router-redux": "4.0.7",
     "redux": "3.6.0",
-    "redux-thunk": "2.1.0"
+    "redux-thunk": "2.1.0",
+    "wordpress-query-posts": "1.1.2"
   },
   "devDependencies": {
     "autoprefixer": "6.5.4",
