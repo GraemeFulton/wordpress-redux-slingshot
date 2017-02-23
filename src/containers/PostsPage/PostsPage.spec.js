@@ -1,12 +1,12 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {HomePage} from './HomePage';
+import {PostsPage} from './PostsPage';
 import PostLoop from '../../components/PostLoop/PostLoop';
 
 describe('<PostLoop />', () => {
-  it('should contain <PrototyprBlogPage />', () => {
+  it('should contain <QueryPosts />', () => {
 
-    const wrapper = shallow(<HomePage  />);
+    const wrapper = shallow(<PostsPage  />);
 
     expect(wrapper.find(PostLoop).length).toEqual(1);
   });

@@ -5,7 +5,7 @@ import {bindActionCreators} from 'redux';
 
 import PostLoop from '../../components/PostLoop/PostLoop';
 
-export const HomePage = (props) => {
+export const PostsPage = (props) => {
   return (
     <PostLoop
         posts={props.posts}
@@ -14,7 +14,7 @@ export const HomePage = (props) => {
 };
 
 
-HomePage.propTypes = {
+PostsPage.propTypes = {
   actions: PropTypes.object.isRequired,
   posts: PropTypes.object.isRequired
 };
@@ -35,4 +35,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(HomePage);
+)(PostsPage);
