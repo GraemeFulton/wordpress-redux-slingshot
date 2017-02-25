@@ -1,12 +1,13 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import QueryPosts from 'wordpress-query-posts';
 
 class PostLoop extends React.Component {
 
   render() {
+
     return (
       <div>
-        <QueryPosts query={ { search: '' } } />
+        <QueryPosts query={{search: '' }}/>
         <h2>Posts</h2>
 
           {Object.keys(this.props.posts.items).map((item, id) => {
@@ -18,7 +19,10 @@ class PostLoop extends React.Component {
       </div>
     );
   }
-
 }
+
+PostLoop.propTypes = {
+  posts: PropTypes.array
+};
 
 export default PostLoop;

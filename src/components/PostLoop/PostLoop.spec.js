@@ -1,17 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import PrototyprBlogPage from './PrototyprBlogPage';
+import PostLoop from './PostLoop';
 
-describe('<PrototyprBlogPage />', () => {
-  it('should contain <QueryPosts /> components', () => {
-    const SiteSettings = () => {
-    };
-  })
-  const expected = <PrototyprBlogPage />;
+describe('<PostLoop />', () => {
+  it('should contain <QueryPosts /> components');
 
-  const wrapper = shallow(<PrototyprBlogPage
-    SiteSettings={SiteSettings}
-    />);
+  const expected = <PostLoop />;
+
+  const wrapper = shallow(<PostLoop />);
   expect(wrapper.contains(expected)).toBeTruthy();
 
 });
