@@ -40,7 +40,8 @@
     "react-router-redux": "4.0.7",
     "redux": "3.6.0",
     "redux-thunk": "2.1.0",
-    "wordpress-query-posts": "1.1.2"
+    "wordpress-query-posts": "https://github.com/GraemeFulton/wordpress-query-posts/tarball/master",
+    "wordpress-query-term": "1.1.0"
   },
   "devDependencies": {
     "autoprefixer": "6.5.4",
