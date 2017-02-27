@@ -1,10 +1,10 @@
 import React, {PropTypes} from 'react';
 import QueryPosts from 'wordpress-query-posts';
+import PostLoopItem from './PostLoopItem/PostLoopItem';
 
 class PostLoop extends React.Component {
 
   render() {
-    console.log(this.props.posts);
 
     return (
       <div>
@@ -13,13 +13,13 @@ class PostLoop extends React.Component {
 
           {Object.keys(this.props.posts.items).map((item, id) => {
                  return (
-                   <div key={id}>
-                     <a href={this.props.posts.items[item].link} target={'_new'}>
-                        <p>{this.props.posts.items[item].title.rendered} </p>
-                        <img width={350} src={this.props.posts.items[item].og_image} />
-                      </a>
-                      <p>Source: {this.props.posts.items[item].og_site_name} | {this.props.posts.items[item].date}</p>
-                  </div>
+                   <PostLoopItem
+                     key = {id}
+                     link = {this.props.posts.items[item].link}
+                     title = {this.props.posts.items[item].title.rendered}
+                     image = {this.props.posts.items[item].og_image}
+                     siteName = {this.props.posts.items[item].og_site_name}
+                     date = {this.props.posts.items[item].date} />
                  );
              })
            }
