@@ -9,7 +9,8 @@ import PostLoop from '../../components/PostLoop/PostLoop';
 export const PostsPage = (props) => {
   return (
     <PostLoop
-        posts={props.posts}
+        posts={props.posts.items}
+        postType = {'inspiration'}
         SiteSettings = {constants}
     />
   );

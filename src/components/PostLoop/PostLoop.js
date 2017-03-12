@@ -8,18 +8,18 @@ class PostLoop extends React.Component {
 
     return (
       <div>
-        <QueryPosts postType={'inspiration'} query={{search: '' }}/>
+        <QueryPosts postType={this.props.postType} query={{search: '' }}/>
         <h2>Inspiration</h2>
 
-          {Object.keys(this.props.posts.items).map((item, id) => {
+          {Object.keys(this.props.posts).map((item, id) => {
                  return (
                    <PostLoopItem
                      key = {id}
-                     link = {this.props.posts.items[item].link}
-                     title = {this.props.posts.items[item].title.rendered}
-                     image = {this.props.posts.items[item].og_image}
-                     siteName = {this.props.posts.items[item].og_site_name}
-                     date = {this.props.posts.items[item].date} />
+                     link = {this.props.posts[item].link}
+                     title = {this.props.posts[item].title.rendered}
+                     image = {this.props.posts[item].og_image}
+                     siteName = {this.props.posts[item].og_site_name}
+                     date = {this.props.posts[item].date} />
                  );
              })
            }
@@ -29,7 +29,8 @@ class PostLoop extends React.Component {
 }
 
 PostLoop.propTypes = {
-  posts: PropTypes.array
+  posts: PropTypes.array,
+  postType:PropTypes.string
 };
 
 export default PostLoop;
