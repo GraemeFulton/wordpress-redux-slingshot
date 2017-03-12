@@ -9,7 +9,7 @@ class PostLoop extends React.Component {
     return (
       <div>
         <QueryPosts postType={this.props.postType} query={{search: '' }}/>
-        <h2>Inspiration</h2>
+        <h2>{this.props.postType}</h2>
 
           {Object.keys(this.props.posts).map((item, id) => {
                  return (
